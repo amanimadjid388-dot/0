@@ -6,14 +6,20 @@
   <style>
     body {
       margin: 0;
-      height: 100vh;
+      height: 100vh;              /* ارتفاع الشاشة بالكامل */
+      width: 100vw;               /* عرض الشاشة بالكامل */
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      background: #0f0f0f;
       color: white;
       font-family: 'Courier New', monospace;
+
+      /* الخلفية بالصورة */
+      background-image: url("InShot_20260630_221201852.jpg"); 
+      background-size: 100% 100%;  /* تجعل الصورة بنفس حجم الموقع بالضبط */
+      background-position: center; /* تتمركز في الوسط */
+      background-repeat: no-repeat;/* بدون تكرار */
     }
 
     h1 {
@@ -35,7 +41,7 @@
     }
 
     button {
-      margin-top: 40px;
+      margin-top: 20px;
       padding: 15px 30px;
       font-size: 1.2em;
       cursor: pointer;
@@ -67,8 +73,7 @@
   <button id="startBtn">Start</button>
   <button id="nextBtn" onclick="nextPage()">Next</button>
 
-  <!-- ملف الصوت -->
-  <audio id="typingSound" src="Find 'صوت كيبورد' on TikTok - TikTok Search.mp3"></audio>
+  <audio id="typingSound" src="sounds/typing.mp3"></audio>
 
   <script>
     const title = document.getElementById("title");
@@ -76,23 +81,15 @@
     const startBtn = document.getElementById("startBtn");
 
     startBtn.onclick = function() {
-      // تشغيل الصوت عند الضغط
       sound.play();
-
-      // تشغيل أنيميشن الكتابة
       title.style.animation = "typing 5s steps(34, end) forwards, blink .75s step-end infinite";
-
-      // إيقاف الصوت بعد انتهاء الكتابة
       setTimeout(() => sound.pause(), 5000);
-
-      // إخفاء زر Start بعد الضغط
       startBtn.style.display = "none";
     };
 
     function nextPage() {
-      window.location.href = "lessons.html"; // الانتقال للصفحة الثانية
+      window.location.href = "lessons.html";
     }
   </script>
 </body>
 </html>
-
