@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lessons</title>
+  <!-- استدعاء خط جميل من Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background: #222;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .lesson {
+      background: white;
+      margin: 20px auto;
+      padding: 20px;
+      width: 80%;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    video {
+      width: 40%;
+      border-radius: 8px;
+    }
+    .description {
+      width: 60%;
+    }
+    h2 {
+      font-family: 'Poppins', sans-serif; /* الخط الجديد */
+      font-size: 1.8em;
+      margin-top: 0;
+      position: relative;
+      display: inline-block;
+    }
+    /* تسطير أنيق تحت العنوان */
+    h2::after {
+      content: "";
+      display: block;
+      width: 50%;
+      height: 3px;
+      background: orange;
+      margin-top: 5px;
+      border-radius: 2px;
+    }
+    p {
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Scientific Lessons</h1>
+  </header>
+
+  <div class="lesson">
+    <video controls>
+      <source src="legend simon - soon (@_.5574)_2.mp4" type="video/mp4">
+      متصفحك لا يدعم تشغيل الفيديو.
+    </video>
+    <div class="description">
+      <h2>Mathematics: Graphical Representation of basic functions</h2>
+      
+    </div>
+  </div>
+
+  <div class="lesson">
+    <video controls>
+      <source src="legend simon - soon (@_.5574)_3.mp4" type="video/mp4">
+      متصفحك لا يدعم تشغيل الفيديو.
+    </video>
+    <div class="description">
+      <h2>Physics: Newton's three Laws</h2>
+      
+    
+    </div>
+  </div>
+</body>
+</html>
